@@ -186,7 +186,9 @@ body {
     .card--daniel{
       background-image: url(images/bg-pattern-quotation.svg);
       background-repeat: no-repeat;
-      background-position: top 40px right 60px;
+      background-position: top right 60px;
+      
+      
     }
   }
   @media(min-width:65em){
@@ -197,10 +199,11 @@ body {
         "jeanette patrick patrick kira";
         place-content: center;
       }
-      .card--daniel{
+    
+      /* .card--daniel{
         background-image: url(images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
-        background-position: top 40 right 60px;
-      }
+        background-position: top 40px right 60px;
+      } */
   }
   
