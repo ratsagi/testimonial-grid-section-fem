@@ -15,20 +15,20 @@
 
 
     /* Spacing */
-    --space-50:4px;
-    --space-100:8px;
-    --space-200:16px;
-    --space-300:24px;
-    --space-400:32px;
-    --space-500:40px;
+    --space-50:0.25rem;
+    --space-100:0.5rem;
+    --space-200:1rem;
+    --space-300:1.5rem;
+    --space-400:2rem;
+    --space-500:2.5rem;
 
     /* radius */
-    --radius:8px;
+    --radius:var(--space-100);
     /* Typography */
     --family-sans:"Barlow Semi Condensed", sans-serif;
-     --text-preset-1:20px;
-     --text-preset-2:13px;
-     --text-preset-4:11px;
+     --text-preset-1:1.25rem;
+     --text-preset-2:0,8125rem;
+     --text-preset-4:0.6875rem;
      --line-height-1:1.2;
      --line-height-2:1.1;
      --line-height-3:1.4;
@@ -94,7 +94,7 @@ body {
   }
   .testimonial-grid{
     display: grid;
-    margin: 72px 35px;
+    margin: 4.5rem 2,1875rem;
     grid-template-columns: 1fr;
     grid-template-areas: "daniel" "jonathan"
      "jeanette" "patrick" "kira";
