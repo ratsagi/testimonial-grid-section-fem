@@ -34,7 +34,54 @@
      --line-height-3:1.4;
      --letter-preset:0px;
      
-}   
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }   
 body {
     font-family:var(--family-sans); 
     font-weight: 500;
@@ -42,16 +89,88 @@ body {
     font-size: var(--text-preset-2);
     line-height: var(--line-height-2);
     letter-spacing: var(--letter-preset);
+    color: var(--grey-500);
+    background-color: #F6F5F6;
   }
+  .testimonial-grid{
+    display: grid;
+    margin: 72px 35px;
+    grid-template-areas: "daniel" "jonathan"
+     "jeanette" "patrick" "kira";
+     place-content: center;
+     min-height: 100vh;
+     gap: var(--space-400);
+     
+  }
+  .card{
+    padding: var(--space-400);
+    border-radius: var(--radius);
+    
+  }
+  .card__profile{
+    display: flex;
+    align-items: center;
+    column-gap: var(--space-200);
+  }
+  .card__avatar{
+    border-radius: 50%;
+  }
+  
   .card__profile-status{
     font-size: var(--text-preset-4);
+    margin-top: 4px;
   }
   .card__quotes p:first-child{
     font-size: var(--text-preset-1);
     line-height: var(--line-height-1);
     font-weight: 600;
+    padding-block: var(--space-200);
 
   }
   .card__quotes p:last-child{
     line-height: var(--line-height-3);
+  }
+  .card--daniel{
+    background-color: var(--purple-500);
+    grid-area: daniel;
+  }
+  .card--jonathan{
+    background-color: var(--grey-500);
+    grid-area: jonathan;
+  }
+  .card--jeanette{
+    background-color: var(--white);
+    grid-area: jeanette;
+  }
+  .card--patrick{
+    background-color: var(--dark-blue);
+    grid-area: patrick;
+  }
+  .card--kira{
+    background-color: var(--white);
+    grid-area: kira;
+  }
+  .white{
+    color:var(--white);
+  }
+  .purple-50{
+    color: var(--purple-50);
+  }
+  .grey-100{
+    color: var(--grey-100);
+  }
+  .grey-200{
+    color: var(--grey-200);
+  }
+  .grey-400{
+    color:var(--grey-400);
+  }
+  .grey-500{
+    color: var(--grey-500);
+  }
+  .stroke-daniel{
+    border: var(--space-100) solid #A775F1;
+  }
+  .stroke-patrick{
+    border: var(--space-100) solid  var(--purple-500);
   }
