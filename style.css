@@ -95,6 +95,7 @@ body {
   .testimonial-grid{
     display: grid;
     margin: 72px 35px;
+    grid-template-columns: 1fr;
     grid-template-areas: "daniel" "jonathan"
      "jeanette" "patrick" "kira";
      place-content: center;
@@ -174,3 +175,20 @@ body {
   .stroke-patrick{
     border: var(--space-100) solid  var(--purple-500);
   }
+  @media(min-width:48em){
+    .testimonial-grid{
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-areas: "daniel daniel"
+      "jonathan jeanette" "patrick patrick"
+      "kira kira";
+    }
+  }
+  @media(min-width:65em){
+    .testimonial-grid{
+        margin: 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+      }
+  }
+  
