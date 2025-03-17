@@ -1,226 +1,255 @@
-:root{
-/* Primary*/
-    --purple-50: hsl(260, 100%, 95%);
-    --purple-300: hsl(264, 82%, 80%);
-    --purple-500: hsl(263, 55%, 52%);
+:root {
+	/* Primary*/
+	--purple-50: hsl(260, 100%, 95%);
+	--purple-300: hsl(264, 82%, 80%);
+	--purple-500: hsl(263, 55%, 52%);
 
-    /* Neutral*/
-    --white: hsl(0, 0%, 100%);
-    --grey-100: hsl(214, 17%, 92%);
-    --grey-200: hsl(0, 0%, 81%);
-    --grey-400: hsl(224, 10%, 45%);
-    --grey-500: hsl(217, 19%, 35%);
-    --dark-blue: hsl(219, 29%, 14%);
-    --black: hsl(0, 0%, 7%);
+	/* Neutral*/
+	--white: hsl(0, 0%, 100%);
+	--grey-100: hsl(214, 17%, 92%);
+	--grey-200: hsl(0, 0%, 81%);
+	--grey-400: hsl(224, 10%, 45%);
+	--grey-500: hsl(217, 19%, 35%);
+	--dark-blue: hsl(219, 29%, 14%);
+	--black: hsl(0, 0%, 7%);
 
+	/* Spacing */
+	--space-50: 0.25rem;
+	--space-100: 0.5rem;
+	--space-200: 1rem;
+	--space-300: 1.5rem;
+	--space-400: 1.6rem;
+	--space-500: 2.5rem;
 
-    /* Spacing */
-    --space-50:0.25rem;
-    --space-100:0.5rem;
-    --space-200:1rem;
-    --space-300:1.5rem;
-    --space-400:2rem;
-    --space-500:2.5rem;
+	/* radius */
+	--radius: var(--space-100);
+	/* Typography */
+	--family-sans: 'Barlow Semi Condensed', sans-serif;
+	--text-preset-1: 1.1875rem;
+	--text-preset-2: 0.8125rem;
+	--text-preset-4: 0.6875rem;
+	--line-height-1: 1.2;
+	--line-height-2: 1.1;
+	--line-height-3: 1.4;
+	--letter-preset: 0px;
 
-    /* radius */
-    --radius:var(--space-100);
-    /* Typography */
-    --family-sans:"Barlow Semi Condensed", sans-serif;
-     --text-preset-1:1.25rem;
-     --text-preset-2:0,8125rem;
-     --text-preset-4:0.6875rem;
-     --line-height-1:1.2;
-     --line-height-2:1.1;
-     --line-height-3:1.4;
-     --letter-preset:0px;
-     
+	/* Layout */
+	--max-width: 1114px;
 }
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
-    
-    margin: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }   
-body {
-    font-family:var(--family-sans); 
-    font-weight: 500;
-    font-style: normal;
-    font-size: var(--text-preset-2);
-    line-height: var(--line-height-2);
-    letter-spacing: var(--letter-preset);
-    color: var(--grey-500);
-    background-color: #F6F5F6;
-  }
-  .testimonial-grid{
-    display: grid;
-    padding: 4.5rem 2.1875rem;
-    min-height: 100dvh;
-    place-content: center;
-    grid-template-columns: 1fr;
-    grid-template-areas: "daniel" "jonathan"
-     "jeanette" "patrick" "kira";
-     gap: var(--space-400);
-     
-  }
-  .card{
-    padding: var(--space-400);
-    border-radius: var(--radius);
-    
-  }
-  .card__profile{
-    display: flex;
-    align-items: center;
-    column-gap: var(--space-200);
-  }
-  .card__avatar{
-    border-radius: 50%;
-  }
-  
-  .card__profile-status{
-    font-size: var(--text-preset-4);
-    margin-top: 4px;
-  }
-  .card__quotes p:first-child{
-    font-size: var(--text-preset-1);
-    line-height: var(--line-height-1);
-    font-weight: 600;
-    padding-block: var(--space-200);
+#root,
+#__next {
+	isolation: isolate;
+}
 
-  }
-  .card__quotes p:last-child{
-    line-height: var(--line-height-3);
-  }
-  .card--daniel{
-    background-color: var(--purple-500);
-    grid-area: daniel;
-  }
-  .card--jonathan{
-    background-color: var(--grey-500);
-    grid-area: jonathan;
-  }
-  .card--jeanette{
-    background-color: var(--white);
-    grid-area: jeanette;
-  }
-  .card--patrick{
-    background-color: var(--dark-blue);
-    grid-area: patrick;
-  }
-  .card--kira{
-    background-color: var(--white);
-    grid-area: kira;
-  }
-  .white{
-    color:var(--white);
-  }
-  .purple-50{
-    color: var(--purple-50);
-  }
-  .grey-100{
-    color: var(--grey-100);
-  }
-  .grey-200{
-    color: var(--grey-200);
-  }
-  .grey-400{
-    color:var(--grey-400);
-  }
-  .grey-500{
-    color: var(--grey-500);
-  }
-  .stroke-daniel{
-    border: var(--space-100) solid #A775F1;
-  }
-  .stroke-patrick{
-    border: var(--space-100) solid  var(--purple-500);
-  }
-  @media(min-width:48em){
-    .testimonial-grid{
-     padding: 0;
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-areas: "daniel daniel"
-      "jonathan jeanette" "patrick patrick"
-      "kira kira";
-    }
-    .quote{
-      position: relative;
-      z-index: 1;
-    }
-    .quote::before{
-      content:url("images/bg-pattern-quotation.svg");
-      position: absolute;
-      display: block;
-      bottom: 32px;
-      right:40px;
-      z-index: -2;
-    }
-    /* .card--daniel{
+body {
+	font-family: var(--family-sans);
+	font-weight: 500;
+	font-style: normal;
+	font-size: var(--text-preset-2);
+	line-height: var(--line-height-2);
+	letter-spacing: var(--letter-preset);
+	color: var(--grey-500);
+	background-color: #f6f5f6;
+	display: grid;
+	place-content: center;
+	min-height: 100dvh;
+}
+
+.testimonial-grid {
+	display: grid;
+	padding: 4.5rem 2.1875rem;
+	/* place-content: center; */
+	grid-template-columns: 1fr;
+	grid-template-areas: 'daniel' 'jonathan' 'jeanette' 'patrick' 'kira';
+	gap: var(--space-400);
+}
+
+.card {
+	padding: var(--space-400);
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+
+.card__profile {
+	display: flex;
+	align-items: center;
+	column-gap: var(--space-200);
+}
+
+.card__avatar {
+	border-radius: 50%;
+	width: 1.875rem;
+}
+
+.card__profile-status {
+	font-size: var(--text-preset-4);
+	margin-top: 4px;
+}
+.card__quotes p:first-child {
+	font-size: var(--text-preset-1);
+	line-height: var(--line-height-1);
+	font-weight: 600;
+	padding-block: var(--space-200);
+}
+.card__quotes p:last-child {
+	line-height: var(--line-height-3);
+}
+.card--daniel {
+	background-color: var(--purple-500);
+	grid-area: daniel;
+}
+.card--jonathan {
+	background-color: var(--grey-500);
+	grid-area: jonathan;
+}
+.card--jeanette {
+	background-color: var(--white);
+	grid-area: jeanette;
+}
+.card--patrick {
+	background-color: var(--dark-blue);
+	grid-area: patrick;
+}
+.card--kira {
+	background-color: var(--white);
+	grid-area: kira;
+}
+.white {
+	color: var(--white);
+}
+.purple-50 {
+	color: var(--purple-50);
+}
+.grey-100 {
+	color: var(--grey-100);
+}
+.grey-200 {
+	color: var(--grey-200);
+}
+.grey-400 {
+	color: var(--grey-400);
+}
+.grey-500 {
+	color: var(--grey-500);
+}
+.stroke-daniel {
+	border: 2px solid #a775f1;
+}
+.stroke-patrick {
+	border: 2px solid var(--purple-500);
+}
+@media (min-width: 48em) {
+	.testimonial-grid {
+		/* padding: 0; */
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			'daniel daniel'
+			'jonathan jeanette' 'patrick patrick'
+			'kira kira';
+	}
+	.quote {
+		position: relative;
+		z-index: 1;
+	}
+	.quote::before {
+		content: url('images/bg-pattern-quotation.svg');
+		position: absolute;
+		display: block;
+		bottom: 32px;
+		right: 40px;
+		z-index: -2;
+	}
+	/* .card--daniel{
       background-image: url(images/bg-pattern-quotation.svg);
       background-repeat: no-repeat;
       background-position: top right 60px;  
     } */
-  }
-  @media(min-width:65em){
-    .testimonial-grid{
-        margin: 0;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "daniel daniel jonathan kira"
-        "jeanette patrick patrick kira";
-      }
-      .quote::before{
-        content:url("images/bg-pattern-quotation.svg");
-        position: absolute;
-        display: block;
-        bottom: 60px;
-        right:40px;
-        z-index: -2;
-      }
-      /* .card--daniel{
+}
+@media (min-width: 65em) {
+	.testimonial-grid {
+		padding: 2rem;
+		max-width: calc(var(--max-width) + 2rem);
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			'daniel daniel jonathan kira'
+			'jeanette patrick patrick kira';
+	}
+
+	.quote::before {
+		content: url('images/bg-pattern-quotation.svg');
+		position: absolute;
+		display: block;
+		bottom: 60px;
+		right: 40px;
+		z-index: -2;
+	}
+	/* .card--daniel{
         background-image: url(images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
         background-position: top 40px right 60px;
       } */
-  }
-  
+}
