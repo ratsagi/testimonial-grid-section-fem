@@ -1,88 +1,110 @@
-:root{
-/* Primary*/
-    --purple-50: hsl(260, 100%, 95%);
-    --purple-300: hsl(264, 82%, 80%);
-    --purple-500: hsl(263, 55%, 52%);
+:root {
+	/* Primary*/
+	--purple-50: hsl(260, 100%, 95%);
+	--purple-300: hsl(264, 82%, 80%);
+	--purple-500: hsl(263, 55%, 52%);
 
-    /* Neutral*/
-    --white: hsl(0, 0%, 100%);
-    --grey-100: hsl(214, 17%, 92%);
-    --grey-200: hsl(0, 0%, 81%);
-    --grey-400: hsl(224, 10%, 45%);
-    --grey-500: hsl(217, 19%, 35%);
-    --dark-blue: hsl(219, 29%, 14%);
-    --black: hsl(0, 0%, 7%);
+	/* Neutral*/
+	--white: hsl(0, 0%, 100%);
+	--grey-100: hsl(214, 17%, 92%);
+	--grey-200: hsl(0, 0%, 81%);
+	--grey-400: hsl(224, 10%, 45%);
+	--grey-500: hsl(217, 19%, 35%);
+	--dark-blue: hsl(219, 29%, 14%);
+	--black: hsl(0, 0%, 7%);
 
+	/* Spacing */
+	--space-50: 0.25rem;
+	--space-100: 0.5rem;
+	--space-200: 1rem;
+	--space-300: 1.5rem;
+	--space-400: 1.6rem;
+	--space-500: 2.5rem;
 
-    /* Spacing */
-    --space-50:0.25rem;
-    --space-100:0.5rem;
-    --space-200:1rem;
-    --space-300:1.5rem;
-    --space-400:2rem;
-    --space-500:2.5rem;
+	/* radius */
+	--radius: var(--space-100);
+	/* Typography */
+	--family-sans: 'Barlow Semi Condensed', sans-serif;
+	--text-preset-1: 1.1875rem;
+	--text-preset-2: 0.8125rem;
+	--text-preset-4: 0.6875rem;
+	--line-height-1: 1.2;
+	--line-height-2: 1.1;
+	--line-height-3: 1.4;
+	--letter-preset: 0px;
 
-    /* radius */
-    --radius:var(--space-100);
-    /* Typography */
-    --family-sans:"Barlow Semi Condensed", sans-serif;
-     --text-preset-1:1.25rem;
-     --text-preset-2:0,8125rem;
-     --text-preset-4:0.6875rem;
-     --line-height-1:1.2;
-     --line-height-2:1.1;
-     --line-height-3:1.4;
-     --letter-preset:0px;
-     
+	/* Layout */
+	--max-width: 1114px;
 }
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
-    
-    margin: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }   
+#root,
+#__next {
+	isolation: isolate;
+}
+
 body {
     font-family:var(--family-sans); 
     font-weight: 500;
@@ -223,5 +245,4 @@ body {
         background-repeat: no-repeat;
         background-position: top 40px right 60px;
       } */
-  }
-  
+}
