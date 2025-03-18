@@ -111,9 +111,7 @@ body {
     line-height: var(--line-height-2);
     letter-spacing: var(--letter-preset);
     color: var(--grey-500);
-    background-color: #F6F5F6;
-    
-  
+    background-color: #F6F5F6;  
   }
   .testimonial-grid{
     display: grid;
@@ -223,9 +221,16 @@ body {
     
   }
   @media(min-width:65em){
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
     .testimonial-grid{
         margin: 0;
         padding: 0;
+        max-width: calc(1114px + 2rem);
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "daniel daniel jonathan kira"
         "jeanette patrick patrick kira";
