@@ -197,13 +197,13 @@ body {
   .stroke-patrick{
     border: var(--space-100) solid  var(--purple-500);
   }
-  @media(min-width:48em){
+  @media(min-width:42em){
     .testimonial-grid{
      grid-template-columns: repeat(2, 1fr);
      grid-template-areas: "daniel daniel"
       "jonathan jeanette" "patrick patrick"
       "kira kira";
-      
+      /* max-width: calc(768px + 2rem); */
    
     }
     .quote{
@@ -214,23 +214,23 @@ body {
       content:url("images/bg-pattern-quotation.svg");
       position: absolute;
       display: block;
-      bottom: 32px;
-      right:40px;
+      bottom: 40px;
+      right:180px;
       z-index: -2;
     }
     
   }
-  @media(min-width:65em){
+  @media(min-width:62.5em){
     body{
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      min-height: 100dvh;
     }
     .testimonial-grid{
         margin: 0;
         padding: 0;
-        max-width: calc(1114px + 2rem);
+        max-width: calc(1110px + 2rem);
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "daniel daniel jonathan kira"
         "jeanette patrick patrick kira";
@@ -240,12 +240,12 @@ body {
         position: absolute;
         display: block;
         bottom: 60px;
-        right:40px;
+        right:60px;
         z-index: -2;
       }
       /* .card--daniel{
         background-image: url(images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
-        background-position: top 40px right 60px;
+        background-position: top  right 20%;
       } */
 }
